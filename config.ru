@@ -1,2 +1,2 @@
-require '.sincapun'
+require './sincapun'
 run Sincapun
