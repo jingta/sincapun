@@ -8,20 +8,20 @@ require 'bundler/capistrano'
 
 
 set :application, "sincapun"
-#set :repository,  "git@github.com:"
-#set :scm, :git
+set :repository,  "git@github.com:jingta/sincapun.git"
+set :scm, :git
 
 # do not use sudo
-set :use_sudo, false
-set(:run_method) { use_sudo ? :sudo : :run }
+#set :use_sudo, false
+#set(:run_method) { use_sudo ? :sudo : :run }
 # This is needed to correctly handle sudo password prompt
-default_run_options[:pty] = true
+#default_run_options[:pty] = true
 
 set :user, "ubuntu"
 set :group, user
 set :runner, user
 
-set :host, "#{user}@myhost"
+set :host, "#{user}@stegos"
 
 role :web, host
 role :app, host
